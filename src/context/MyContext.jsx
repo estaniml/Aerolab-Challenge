@@ -9,17 +9,20 @@ export const MyProvider = ({ children }) => {
         const [points, setPoints] = useState(null)
         const [pointsUpdate, setPointsUpdate] = useState(false)
         const [loading, setLoading] = useState(false)
-    
+     
+
         useEffect(() => {
+
         const options = {
             method: 'GET',
             headers: {
                 contentType: 'application/json',
                 accept: 'application/json',
-                authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmYyNGVjM2I1Zjc3MDAwMjE4ZGJiMmUiLCJpYXQiOjE2NjAwNDcwNDN9.uh40bC5Rdp5n_B5qTKqdPPXaVk9tIPVt8loxgBTi4oI'
+                authorization: `${import.meta.env.VITE_APP_AEROLAB}`
             }
         }
-    
+
+
         const getUser = async () => {
             setLoading(true);
             const response = await fetch('https://coding-challenge-api.aerolab.co/user/me', options);
@@ -38,7 +41,7 @@ export const MyProvider = ({ children }) => {
     
             request.setRequestHeader('Content-Type', 'application/json');
             request.setRequestHeader('Accept', 'application/json');
-            request.setRequestHeader('Authorization', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmYyNGVjM2I1Zjc3MDAwMjE4ZGJiMmUiLCJpYXQiOjE2NjAwNDcwNDN9.uh40bC5Rdp5n_B5qTKqdPPXaVk9tIPVt8loxgBTi4oI');
+            request.setRequestHeader('Authorization', `${import.meta.env.VITE_APP_AEROLAB}`);
     
             let body = {
             'amount': parseInt(`${points}`)

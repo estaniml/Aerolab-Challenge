@@ -12,7 +12,6 @@ const Container = styled.div`
     min-height: 1640px;
 `
 
-
 const Grid = styled.div`
     display: grid;
     gap: 20px;
@@ -62,7 +61,7 @@ const Products = () => {
             headers: {
                 contentType: 'application/json',
                 accept: 'application/json',
-                authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmYyNGVjM2I1Zjc3MDAwMjE4ZGJiMmUiLCJpYXQiOjE2NjAwNDcwNDN9.uh40bC5Rdp5n_B5qTKqdPPXaVk9tIPVt8loxgBTi4oI'
+                authorization: `${import.meta.env.VITE_APP_AEROLAB}`
             }
         }
     

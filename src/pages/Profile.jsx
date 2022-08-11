@@ -134,7 +134,7 @@ const ItemDescription = styled.div`
 `
 
 const Profile = () => {
-
+    console.log(import.meta.env.VITE_APP_AEROLAB)
     const { data } = useContext(MyContext)
 
     const [items, setItems] = useState([])
@@ -146,7 +146,7 @@ const Profile = () => {
             headers: {
                 contentType: 'application/json',
                 accept: 'application/json',
-                authorization: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmYyNGVjM2I1Zjc3MDAwMjE4ZGJiMmUiLCJpYXQiOjE2NjAwNDcwNDN9.uh40bC5Rdp5n_B5qTKqdPPXaVk9tIPVt8loxgBTi4oI'
+                authorization: `${import.meta.env.VITE_APP_AEROLAB}`
             }
         }
     

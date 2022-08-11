@@ -166,7 +166,7 @@ const Product = ({product}) => {
         
         request.setRequestHeader('Content-Type', 'application/json');
         request.setRequestHeader('Accept', 'application/json');
-        request.setRequestHeader('Authorization', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmYyNGVjM2I1Zjc3MDAwMjE4ZGJiMmUiLCJpYXQiOjE2NjAwNDcwNDN9.uh40bC5Rdp5n_B5qTKqdPPXaVk9tIPVt8loxgBTi4oI');
+        request.setRequestHeader('Authorization', `${import.meta.env.VITE_APP_AEROLAB}`);
 
         let body = {
           'productId': `${id}`
