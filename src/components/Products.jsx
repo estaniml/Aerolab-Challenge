@@ -105,6 +105,7 @@ const Products = () => {
             products={products}
             setProducts={setProducts}
             recents={recents}
+            setCurrentPage={setCurrentPage}
         />
         { loading ? <Spinner /> :
             <>

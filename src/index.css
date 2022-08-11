@@ -76,3 +76,21 @@ li {
   transform: scale(1.2);
 }
  
+/* active tab */
+.default {
+  font-size: 14px;
+  background-color: rgb(10, 212, 250,0.1);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+  color:#b8b8b8;
+}
+.default:hover {
+  transform: scale(1.1);
+}
+.active {
+  background-color: #0ad4fa;
+  color:#fff;
+}
